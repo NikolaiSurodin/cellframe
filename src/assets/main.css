@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+@import './base.css';
+@import './text.css';
+
+:root {
+    --color-background: #2D3037;
+    --black: rgb(46, 49, 56);
+    --color-text: #fff;
+    --green: #A9E81C;
+    --disable-button: #B0AEB9;
+    --button-main-background: linear-gradient(230.31deg, rgb(149, 128, 255) 36.872%, rgb(163, 97, 255) 135.996%);
+    --button-hover-background: linear-gradient(90.00deg, rgb(121, 48, 222), rgb(127, 101, 255) 100%);
+    --button-disabled: rgb(176, 174, 185);
+    --main-shadow: inset 3px 3px 5px 0px rgba(8, 7, 13, 0.25), 1px 1px 0px 0px rgba(107, 102, 126, 0.49);
+}
+
+#app {
+    max-width: 100%;
+    font-weight: normal;
+    color: var(--color-text);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.no-scroll {
+    overflow: hidden;
+}
+
+[role="button"] {
+    cursor: pointer;
+}
+
+.btn {
+    align-items: center;
+    appearance: none;
+    background: var(--button-main-background);
+    box-shadow: inset 1px 1px 4px 0 rgb(241, 231, 255), 2px 2px 7px 0 rgba(11, 10, 13, 0.44);
+    border-radius: 30px;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    font-family: Quicksand;
+    font-size: 14px;
+    font-weight: 500;
+    justify-content: center;
+    line-height: 24px;
+    text-align: center;
+    text-decoration: none;
+    transition: 0.3s;
+    white-space: nowrap;
+    border: none;
+    padding: 6px 16px;
+    width: 100%;
+    letter-spacing: 0;
+
+    &:hover {
+        background: var(--button-hover-background);
+    }
+}
+
+.btn[disabled] {
+    border-radius: 30px;
+    box-shadow: 2px 2px 7px 0 rgba(11, 10, 13, 0.44), inset 1px 1px 4px 0 rgba(241, 231, 255, 0.3);
+    background: var(--button-disabled);
+    cursor: not-allowed;
+}
+

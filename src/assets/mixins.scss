@@ -1,0 +1,11 @@
+@mixin ipadpro {
+  @media (min-width: 320px) and (max-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin phone_wide {
+  @media (min-width: 320px) and (max-width: 767px) {
+    @content;
+  }
+}
